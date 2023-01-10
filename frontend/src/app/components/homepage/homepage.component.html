@@ -1,0 +1,43 @@
+<ul>
+  <li *ngFor="let item of foods" class="card">
+
+    <a a routerLink="/food/{{item.id}}"></a>
+
+    <img class="food-thumbnail" [src]="item.imageUrl" [alt]="item.name">
+    <div class="content">
+
+      <div class="name">
+        {{item.name}}
+      </div>
+
+      <span class="favorite {{item.favorite?'':'not'}}">
+        ❤
+      </span>
+
+      <div class="stars">
+        <ngx-stars [color]="'black'" [readonly]="true" [maxStars]="5" [initialStars]="item.stars"></ngx-stars>
+      </div>
+
+      <div class="item-footer">
+        <div class="origins">
+          <span *ngFor="let origin of item.origins">{{origin}} </span>
+        </div>
+
+
+        <div class="cook-time">
+          <span>⏱️</span>
+          {{item.cookTime}}
+        </div>
+      </div>
+
+      <div class="price">
+        <span>
+          {{item.price | currency: 'INR'}}
+        </span>
+      </div>
+
+      
+    </div>
+
+  </li>
+</ul>

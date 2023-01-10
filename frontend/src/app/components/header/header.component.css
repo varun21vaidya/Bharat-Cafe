@@ -1,0 +1,72 @@
+header {
+  position: relative;
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid #e72929;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.logo {
+  padding: 1rem;
+  font-size: 20px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul a {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+ul a:hover {
+  background-color: black;
+  color: white;
+  transition: hover 0.3s;
+}
+
+a span {
+  background: rgb(168, 168, 234);
+  color: white;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 50%;
+}
+.menu-container {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  z-index: 1;
+  background: whitesmoke;
+  display: none;
+}
+
+.menu-container:hover .menu {
+  display: block;
+}
+
+.menu a {
+  width: 100%;
+  min-width: 8rem;
+}
