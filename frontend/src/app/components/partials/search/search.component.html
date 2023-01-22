@@ -1,15 +1,7 @@
-<p>search works!</p>
 <div class="ng-autocomplete">
-  <ng-autocomplete
-    [data]="foods"
-    [searchKeyword]="keyword"
-    placeholder="Enter the Food Name"
-    (selected)='selectEvent($event)'
-    (inputChanged)='onChangeSearch($event)'
-    (inputFocused)='onFocused($event)'
-    historyIdentifier="foods"
-    [itemTemplate]="itemTemplate"
-    [notFoundTemplate]="notFoundTemplate">
+  <ng-autocomplete [data]="foods" [searchKeyword]="keyword" placeholder="Enter the Food Name"
+    (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)'
+    historyIdentifier="foods" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
   </ng-autocomplete>
 
   <ng-template #itemTemplate let-item>
@@ -20,3 +12,6 @@
     <div [innerHTML]="notFound"></div>
   </ng-template>
 </div>
+
+
+

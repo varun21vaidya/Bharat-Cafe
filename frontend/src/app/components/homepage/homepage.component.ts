@@ -4,7 +4,7 @@ import { FoodService } from 'src/app/services/food.service';
 import { Food } from 'src/app/shared/models/food';
 @Component({
   selector: 'app-homepage',
-  template:`{{name}}`,
+  template: `{{ name }}`,
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
@@ -17,19 +17,19 @@ export class HomepageComponent implements OnInit {
     private foodService: FoodService,
     activatedRoute: ActivatedRoute
   ) {
-
-
     activatedRoute.params.subscribe((params) => {
+      // get food item from search bar
       if (params['searchTerm']) {
         this.foods = this.foodService.getAllFoodsBySearchTerm(
           params['searchTerm']
         );
+      }
 
-        if (this.foods.length == 0) {
-          this.message = 'Item is not Available';
-          this.foods = foodService.getAll();
-        }
-      } else this.foods = foodService.getAll();
+      // get foods by specific tags
+      else if (params['tag']) {
+        // console.log('the tag is', params['tag']);
+        this.foods = this.foodService.getFoodByTag(params['tag']);
+      } else this.foods = this.foodService.getAll();
     });
   }
   ngOnInit(): void {}

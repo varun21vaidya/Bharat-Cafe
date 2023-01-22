@@ -1,0 +1,17 @@
+.tagger {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tagger span {
+  background-color: rgba(120, 239, 239, 0.351);
+  display: inline-block;
+  font-size: 0.8rem;
+  color: rgb(82, 72, 255);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+}

@@ -7,11 +7,25 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { HeaderComponent } from './components/partials/header/header.component';
 import { NgxStarsModule } from 'ngx-stars';
 import { SearchComponent } from './components/partials/search/search.component';
-import {AutocompleteLibModule} from 'angular-ng-autocomplete';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { FoodpageComponent } from './components/foodpage/foodpage.component';
+import { TaggerComponent } from './components/partials/tagger/tagger.component';
 
 @NgModule({
-  declarations: [AppComponent, HomepageComponent, HeaderComponent, SearchComponent],
-  imports: [BrowserModule, AppRoutingModule, NgxStarsModule,AutocompleteLibModule],
+  declarations: [
+    AppComponent,
+    HomepageComponent,
+    HeaderComponent,
+    SearchComponent,
+    FoodpageComponent,
+    TaggerComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxStarsModule,
+    AutocompleteLibModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
