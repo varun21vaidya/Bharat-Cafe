@@ -1,7 +1,7 @@
 <app-search></app-search>
 <app-tagger></app-tagger>
 <ul>
-  <li *ngFor="let item of foods" class="card" routerLink="/food/{{item.id}}">
+  <li *ngFor="let item of foods" class="card" routerLink="/api/foods/{{item.id}}">
 
     <img class="food-thumbnail" [src]="item.imageUrl" [alt]="item.name">
     <div class="content">

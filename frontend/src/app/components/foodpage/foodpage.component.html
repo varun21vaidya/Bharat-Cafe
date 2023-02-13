@@ -1,7 +1,7 @@
-<app-not-found [visible]="!food.id" notFoundMessage="Food Not Found !">
+<app-not-found [visible]="!this.food.id" notFoundMessage="Food Not Found !">
 </app-not-found>
 
-<div class="container main" *ngIf="food.id">
+<div class="container main" *ngIf="this.food.id">
   <img class="food-thumbnail" [src]="this.food.imageUrl" [alt]="this.food.name">
   <div class="container content">
 

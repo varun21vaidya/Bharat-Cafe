@@ -66,3 +66,30 @@ export const sample_foods: any[] = [
     tags: ["FastFood", "Pizza", "Lunch"],
   },
 ];
+
+let output = Object.create(null);
+let res: any[] = [];
+res.push({ name: "All", count: sample_foods.length });
+
+// show all tags
+sample_foods.forEach((food) =>
+  food["tags"]?.forEach((tag: string) => (output[tag] = (output[tag] || 0) + 1))
+);
+
+// // return Tag object
+Object.keys(output).forEach((tag) => {
+  res.push({ name: tag, count: output[tag] });
+});
+
+export const taglist = res;
+
+// export const taglist: any[] = [
+//   { name: "All", count: 6 },
+//   { name: "FastFood", count: 4 },
+//   { name: "Pizza", count: 2 },
+//   { name: "Lunch", count: 3 },
+//   { name: "SlowFood", count: 2 },
+//   { name: "burger", count: 1 },
+//   { name: "Fry", count: 1 },
+//   { name: "Soup", count: 1 },
+// ];

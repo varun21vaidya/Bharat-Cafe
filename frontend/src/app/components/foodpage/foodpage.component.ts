@@ -10,7 +10,7 @@ import { Food } from 'src/app/shared/models/food';
   styleUrls: ['./foodpage.component.css'],
 })
 export class FoodpageComponent {
-  food!: Food;
+  food: Food = new Food();
   constructor(
     private foodservice: FoodService,
     private activatedroute: ActivatedRoute,
@@ -18,8 +18,14 @@ export class FoodpageComponent {
     private router: Router
   ) {
     this.activatedroute.params.subscribe((param: Params) => {
-      if (param['id']) this.food = this.foodservice.getFoodById(param['id']);
-      // console.log(this.food)
+      // console.log(param);
+      if (param['id']) {
+        // this.food = this.foodservice.getFoodById(param['id']);
+        // console.log(this.food);
+        this.foodservice.getFoodById(param['id']).subscribe((serverfoods) => {
+          this.food = serverfoods[0];
+        });
+      }
     });
   }
 

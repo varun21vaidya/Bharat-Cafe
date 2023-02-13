@@ -11,7 +11,7 @@
           <img src="{{item.food.imageUrl}}" alt="food-thumbnail" class="food-thumbnail">
         </div>
         <div>
-          <a routerLink="/food/{{item.food.id}}">{{item.food.name}}</a>
+          <a routerLink="/api/foods/{{item.food.id}}">{{item.food.name}}</a>
         </div>
         <div>
           <select #Selectquantity [value]="item.quantity" (change)="changeQuantity(item,Selectquantity.value)">

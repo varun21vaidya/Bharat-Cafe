@@ -12,17 +12,19 @@ import { Tag } from 'src/app/shared/models/tag';
 })
 export class SearchComponent {
   keyword = 'name';
-  foods: Food[];
+  foods!: Food[];
   constructor(private foodservice: FoodService, private router: Router) {
-    this.foods = this.foodservice.getAll();
-    // show all tags
+    // this.foods = this.foodservice.getAll();
+    this.foodservice.getAll().subscribe((serverfoods) => {
+      this.foods = serverfoods;
+    });
   }
   selectEvent(term: any) {
-    // console.log(term)
+    // console.log('this term is selected', term);
     // do something with selected item
 
     // show the searched food on page ie created in food.service with getAllFoodsBySearchTerm
-    this.router.navigateByUrl('/search/' + term.name);
+    this.router.navigateByUrl('/api/foods/search/' + term.name);
   }
 
   onChangeSearch(search: string) {

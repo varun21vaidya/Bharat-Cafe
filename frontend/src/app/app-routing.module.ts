@@ -6,10 +6,11 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'search/:searchTerm', component: HomepageComponent },
-  { path: 'food/:id', component: FoodpageComponent },
-  { path: 'tag/:tag', component: HomepageComponent },
-  {path: 'cart-page', component:CartPageComponent}
+  { path: 'api/foods/search/:searchTerm', component: HomepageComponent },
+  { path: 'api/foods/:id', component: FoodpageComponent },
+  { path: 'api/foods/tag/:tag', component: HomepageComponent },
+  { path: 'cart-page', component: CartPageComponent },
+  { path: 'checkout', component: CartPageComponent },
 ];
 
 @NgModule({

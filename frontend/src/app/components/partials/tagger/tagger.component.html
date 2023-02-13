@@ -1,5 +1,6 @@
 <div class="tagger">
-  <span *ngFor="let tag of taglist" routerLink="/tag/{{tag.name}}">
+  <span *ngFor="let tag of taglist" routerLink="/api/foods/tag/{{tag.name}}">
     {{tag.name}}({{tag.count}})
   </span>
 </div>
+

@@ -9,10 +9,13 @@ import { Tag } from 'src/app/shared/models/tag';
   styleUrls: ['./tagger.component.css'],
 })
 export class TaggerComponent {
-  taglist?: Tag[];
+  taglist!: Tag[];
   constructor(foodservice: FoodService) {
     // show all tags
-    this.taglist = foodservice.getAllTags();
+    // this.taglist = foodservice.getAllTags();
+    foodservice.getAllTags().subscribe((serverTags) => {
+      this.taglist = serverTags;
+    });
   }
   ngOnInit() {}
 }
