@@ -1,41 +1,41 @@
-<div class="container">
-  <img class="food-thumbnail" [src]="this.food[0].imageUrl" [alt]="this.food[0].name">
-  <div class="content">
+<div class="container main">
+  <img class="food-thumbnail" [src]="this.food.imageUrl" [alt]="this.food.name">
+  <div class="container content">
 
     <div class="name">
-      {{this.food[0].name}}
+      {{this.food.name}}
     </div>
+    <div class="star-heart">
+      <div class="stars">
+        <ngx-stars [color]="'black'" [readonly]="true" [maxStars]="5" [initialStars]="this.food.stars"></ngx-stars>
+      </div>
 
-    <span class="favorite {{this.food[0].favorite?'':'not'}}">
-      ❤
-    </span>
-
-    <div class="stars">
-      <ngx-stars [color]="'black'" [readonly]="true" [maxStars]="5" [initialStars]="this.food[0].stars"></ngx-stars>
+      <span class="favorite {{this.food.favorite?'':'not'}}">
+        ❤
+      </span>
     </div>
-
     <div class="item-footer">
       <div class="origins">
-        <span *ngFor="let origin of this.food[0].origins">{{origin}} </span>
+        <span *ngFor="let origin of this.food.origins">{{origin}} </span>
       </div>
 
 
       <div class="tagger">
-        <span *ngFor="let tag of this.food[0].tags">{{tag}} </span>
+        <span *ngFor="let tag of this.food.tags">{{tag}} </span>
       </div>
 
 
       <div class="cook-time">
-        Cooked in <span class="fw-bolder"> {{this.food[0].cookTime}}</span> Min.
+        Cooked in <span class="fw-bolder"> {{this.food.cookTime}}</span> Min.
       </div>
     </div>
 
     <div class="price">
       Price:
-      <span>{{this.food[0].price | currency: 'INR'}}</span>
+      <span>{{this.food.price | currency: 'INR'}}</span>
     </div>
 
-    <button class="cart btn-danger rounded">Add to Cart</button>
+    <button class="cart btn-danger rounded" (click)="addToCart()">Add to Cart</button>
 
   </div>
 

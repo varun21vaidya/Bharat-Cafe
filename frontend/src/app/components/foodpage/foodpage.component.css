@@ -1,4 +1,4 @@
-.container{
+.main{
   margin-top: 10%;
   display: flex;
   flex-direction: row;
@@ -27,20 +27,24 @@
   font-size: 1.3rem;
 }
 
-.favorite{
-  position: absolute;
-  top: 4%;
-  right:4%;
-  font-size: 1.5rem;
-  color: red;
-}
-
-.favorite.not{
-  color: rgb(187, 187, 187);
+.star-heart{
+  display: flex;
 }
 
 .stars{
   margin: 0.5rem 0rem 0.2rem 0rem;
+  flex: 8
+}
+
+.favorite{
+  font-size: 1.5rem;
+  color: red;
+  flex: 3;
+}
+
+.favorite.not{
+  color: rgb(187, 187, 187);
+  flex: 3;
 }
 
 .item-footer{

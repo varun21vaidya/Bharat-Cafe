@@ -22,8 +22,8 @@ export class FoodService {
   }
 
   // get food by Id so we can use it for search
-  getFoodById(Id: string) {
-    return this.getAll().filter((food) => food.id === Id);
+  getFoodById(foodId: string): Food {
+    return this.getAll().find((food) => food.id == foodId) ?? new Food();
   }
 
   // get tag list and count with Tag[]

@@ -7,6 +7,7 @@ header {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 a:hover {
@@ -31,7 +32,7 @@ ul {
   margin: 0;
 }
 
-ul a {
+ul li a {
   margin: 1rem;
   padding: 0.5rem 1rem;
   display: inline-block;
@@ -41,7 +42,7 @@ ul a {
 ul a:hover {
   background-color: black;
   color: white;
-  transition: hover 0.3s;
+  transition: hover 0.4s;
 }
 
 a span {
@@ -61,12 +62,6 @@ a span {
   background: whitesmoke;
   display: none;
 }
-
 .menu-container:hover .menu {
   display: block;
-}
-
-.menu a {
-  width: 100%;
-  min-width: 8rem;
 }

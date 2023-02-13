@@ -10,6 +10,7 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { FoodpageComponent } from './components/foodpage/foodpage.component';
 import { TaggerComponent } from './components/partials/tagger/tagger.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { TaggerComponent } from './components/partials/tagger/tagger.component';
     SearchComponent,
     FoodpageComponent,
     TaggerComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
