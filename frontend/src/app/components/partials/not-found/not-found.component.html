@@ -1,0 +1,6 @@
+<div class="container mb-2 mt-4">
+  <div class="notfound" *ngIf="visible">
+    {{notFoundMessage}}
+    <button class="btn btn-primary" [routerLink]="resetLinkRoute">{{resetLinkText}}</button>
+  </div>
+</div>

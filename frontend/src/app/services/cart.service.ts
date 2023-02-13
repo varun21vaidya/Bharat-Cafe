@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Cart } from '../shared/models/Cart';
@@ -13,7 +14,7 @@ export class CartService {
   private cart: Cart= this.getCartFromLocalStorage()
 
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart)
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   // add items to cart
   addToCart(food:Food){

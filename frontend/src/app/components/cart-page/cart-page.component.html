@@ -2,47 +2,49 @@
   <header>
     Cart Page
   </header>
+  <app-not-found [visible]=" !cart || !cart.items.length" notFoundMessage="Cart is Empty!">
+  </app-not-found>
+  <ng-container class="cartSection" *ngIf="cart && cart.items.length">
+    <ul class="carttable">
+      <li class="cart" *ngFor="let item of cart.items">
+        <div>
+          <img src="{{item.food.imageUrl}}" alt="food-thumbnail" class="food-thumbnail">
+        </div>
+        <div>
+          <a routerLink="/food/{{item.food.id}}">{{item.food.name}}</a>
+        </div>
+        <div>
+          <select #Selectquantity [value]="item.quantity" (change)="changeQuantity(item,Selectquantity.value)">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+        </div>
+        <div>
+          {{item.price | currency}}
+        </div>
 
-  <ul class="carttable">
-    <li class="cart" *ngFor="let item of cart.items">
-      <div>
-        <img src="{{item.food.imageUrl}}"  alt="food-thumbnail" class="food-thumbnail">
-      </div>
-      <div>
-        <a routerLink="/food/{{item.food.id}}">{{item.food.name}}</a>
-      </div>
-      <div>
-        <select #Selectquantity [value]="item.quantity" (change)="changeQuantity(item,Selectquantity.value)">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-        </select>
-      </div>
-      <div>
-        {{item.price | currency}}
-      </div>
 
+        <button class="btn btn-danger" (click)="removeItem(item)">Remove</button>
+      </li>
+    </ul>
 
-      <button class="btn btn-danger" (click)="removeItem(item)">Remove</button>
-    </li>
-  </ul>
-
-  <div class="checkout">
-    <div class="result"></div>
-    <div class="totalprice">
-      {{cart.totalPrice | currency}}
+    <div class="checkout">
+      <div class="result"></div>
+      <div class="totalprice">
+        {{cart.totalPrice | currency}}
+      </div>
+      <div class="totalcount">
+        {{cart.totalCount}}
+      </div>
+      <a class="btn btn-success" routerLink="/checkout">Proceed to Checkout</a>
     </div>
-    <div class="totalcount">
-      {{cart.totalCount}}
-    </div>
-    <a class="btn btn-success" routerLink="/checkout">Proceed to Checkout</a>
-  </div>
-
+  </ng-container>
 </div>
