@@ -100,3 +100,12 @@
   margin-top: 1rem;
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 600px){
+
+  .main{
+    flex-direction: column;
+    width: 25rem;
+    height: 20rem;
+  }
+}

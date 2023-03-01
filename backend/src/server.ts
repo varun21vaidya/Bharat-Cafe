@@ -1,8 +1,17 @@
 import express from "express";
 import cors from "cors";
-import { sample_foods, taglist } from "./data";
+import foodRouter from "./router/food.router";
+import userRouter from "./router/user.router";
+import dotenv from "dotenv";
+
+// connect to db
+import {connectDB} from "./DB/config";
+connectDB();
 
 const app = express();
+
+// to be able to send json responses
+app.use(express.json());
 
 app.use(
   cors({
@@ -11,36 +20,11 @@ app.use(
   })
 );
 
-app.get("/api/foods/tags", (req, res) => {
-  res.send(taglist);
-});
+// we have shifted all food related api to food.router.ts so use that
+app.use("/api/foods", foodRouter);
 
-app.get("/api/foods", (req, res) => {
-  res.send(sample_foods);
-});
-
-app.get("/api/foods/search/:searchTerm", (req, res) => {
-  const searchTerm = req.params.searchTerm;
-  const foods = sample_foods.filter((food) =>
-    food.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  res.send(foods);
-});
-
-app.get("/api/foods/:id", (req, res) => {
-  const foodId = req.params.id;
-  const foods = sample_foods.filter((food) => food.id == foodId);
-  res.send(foods);
-});
-
-app.get("/api/foods/tag/:tagName", (req, res) => {
-  const tagName = req.params.tagName;
-  if (tagName == "All") {
-    res.send(sample_foods);
-  }
-  const foods = sample_foods.filter((food) => food.tags?.includes(tagName));
-  res.send(foods);
-});
+// we have shifted all user related api to user.router.ts so use that
+app.use("/api/users", userRouter);
 
 const port = 5000;
 app.listen(port, () => {

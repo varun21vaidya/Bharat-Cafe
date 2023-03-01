@@ -67,6 +67,24 @@ export const sample_foods: any[] = [
   },
 ];
 
+export const sample_users: any[]= [
+  {
+    name: "Amit Jain",
+    email: "amit@gmail.com",
+    password:"Amit@123",
+    address: "Bhopal",
+    isAdmin: true,
+  },
+  {
+    name: "John Smith",
+    email: "John@gmail.com",
+    password:"John@123",
+    address: "New York",
+    isAdmin: false,
+  }
+]
+
+
 let output = Object.create(null);
 let res: any[] = [];
 res.push({ name: "All", count: sample_foods.length });
@@ -82,6 +100,8 @@ Object.keys(output).forEach((tag) => {
 });
 
 export const taglist = res;
+
+
 
 // export const taglist: any[] = [
 //   { name: "All", count: 6 },

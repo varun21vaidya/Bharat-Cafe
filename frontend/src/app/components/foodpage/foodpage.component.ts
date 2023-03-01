@@ -20,16 +20,19 @@ export class FoodpageComponent {
     this.activatedroute.params.subscribe((param: Params) => {
       // console.log(param);
       if (param['id']) {
+        // console.log("this is food id we want",param['id'])
         // this.food = this.foodservice.getFoodById(param['id']);
         // console.log(this.food);
-        this.foodservice.getFoodById(param['id']).subscribe((serverfoods) => {
-          this.food = serverfoods[0];
+        this.foodservice.getFoodById(param['id']).subscribe((serverfoods:any) => {
+          // console.log('inside frontend foodpage comp', serverfoods);
+          this.food = serverfoods;
         });
       }
     });
   }
 
   ngOnInit() {}
+
 
   addToCart() {
     this.cartservice.addToCart(this.food);

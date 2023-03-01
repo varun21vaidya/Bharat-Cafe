@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { sample_foods } from 'src/data';
+
 import {
   FOODS_BY_ID_URL,
   FOODS_BY_SEARCH_URL,
@@ -10,7 +10,7 @@ import {
   FOODS_URL,
 } from '../shared/constants/env';
 import { Food } from '../shared/models/food';
-import { Tag, taglist } from '../shared/models/tag';
+import { Tag } from '../shared/models/tag';
 
 @Injectable({
   providedIn: 'root',
@@ -36,7 +36,7 @@ export class FoodService {
   // get food by Id so we can use it for search
   getFoodById(foodId: string): Observable<Food[]> {
     // return this.getAll().find((food) => food.id == foodId) ?? new Food();
-    console.log('this will be id url', FOODS_BY_ID_URL + foodId);
+    // console.log('this will be id url for current foodpage', FOODS_BY_ID_URL + foodId);
     return this.http.get<Food[]>(FOODS_BY_ID_URL + foodId);
   }
 

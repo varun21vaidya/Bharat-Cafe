@@ -22,6 +22,7 @@
     "angular-star-rating": "^6.0.0",
     "ngx-bar-rating": "^4.0.1",
     "ngx-stars": "^1.6.4",
+    "ngx-toastr": "^16.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

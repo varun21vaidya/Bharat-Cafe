@@ -1,0 +1,30 @@
+.load{
+  margin: 0;
+  position: fixed;
+  background-color: #ffffffea;
+  z-index: 10000000;
+  top: 0;
+  left: 0;
+width: 100%;
+ height: 100%;
+}
+
+.details{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+img{
+border-bottom: 10px solid brown;
+width: 200px;
+height: auto;
+}
+
+h1{
+  color: black;
+  text-transform: lowercase;
+}
