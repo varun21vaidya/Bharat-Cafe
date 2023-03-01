@@ -6,29 +6,32 @@ import { User } from 'src/app/shared/models/User';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  cartquantity=0;
-  user!:User;
-  constructor(private cartservice:CartService, private userservice:UserService){
-
+  cartquantity = 0;
+  user!: User;
+  constructor(
+    private cartservice: CartService,
+    private userservice: UserService
+  ) {
     // subscibe to cartquantity items count for the cart header
-    cartservice.getCartObservable().subscribe((newcart)=>{
-      this.cartquantity=newcart.totalCount;
-    })
+    cartservice.getCartObservable().subscribe((newcart) => {
+      this.cartquantity = newcart.totalCount;
+    });
 
     // after user is logged in changed User to User's name
-    userservice.userObservable.subscribe((newUser)=>{
-      this.user= newUser;
-    })
+    userservice.userObservable.subscribe((newUser) => {
+      console.log('after login name', newUser);
+      this.user = newUser;
+    });
   }
 
-  logout(){
+  logout() {
     this.userservice.logout();
   }
 
-  get isLogged(){
-    return this.user.token;
+  get isLogged() {
+    return this.user.name;
   }
 }

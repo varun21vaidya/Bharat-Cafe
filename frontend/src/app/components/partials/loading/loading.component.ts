@@ -13,6 +13,6 @@ export class LoadingComponent {
       this.isLoading=isLoading;
     })
 
-    loadingService.showLoading();
+    loadingService.hideLoading();
    }
 }

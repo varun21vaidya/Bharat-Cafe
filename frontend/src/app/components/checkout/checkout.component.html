@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="content">
+    <header>
+      Order Form
+    </header>
+    <form [formGroup]="checkoutForm">
+      <app-input-container label="Name">
+        <div class="inputValue">
+          <input type="text" placeholder="Name" formControlName="name" />
+        </div>
+      </app-input-container>
+      <app-input-container label="Address">
+        <div class="inputValue">
+          <input type="text" placeholder="Address" formControlName="address" />
+        </div>
+      </app-input-container>
+    </form>
+    <app-order-items-list [order]="order"></app-order-items-list>
+
+  </div>
+  <div class="map">
+    <header>
+      Choose your Address on the Map
+    </header>
+    <app-map></app-map>
+  </div>
+  <div class="buttons-container">
+    <div class="buttons">
+      <button class="btn btn-primary" (click)="createOrder()">
+        Go to Payment
+      </button>
+    </div>
+  </div>
+</div>
