@@ -35,7 +35,7 @@
 
     <div class="price">
       Price:
-      <span>{{this.food.price | currency: ''}}</span>
+      <span>{{this.food.price | currency: 'Rs. '}}</span>
     </div>
 
     <button class="cart btn-danger rounded" (click)="addToCart()">Add to Cart</button>

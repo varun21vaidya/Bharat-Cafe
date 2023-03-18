@@ -118,6 +118,10 @@ router.get(
 router.get(
   "/tag/:tagName",
   asyncHandler(async (req: any, res: any) => {
+    if (req.params.tagName == "All") {
+      const foods = await FoodModel.find();
+      res.send(foods);
+    }
     const searchRegex = new RegExp(req.params.tagName, "i");
     const foods = await FoodModel.find({
       tags: { $regex: searchRegex },

@@ -11,5 +11,11 @@ div a {
   margin: 0.2rem 0.15rem;
   border-radius: 10rem;
   font-weight: 600;
-  color: blue;
+  color: #0d6efd;
+}
+div a:hover {
+  text-decoration: none;
+  box-shadow: none;
+  color: white;
+  background-color: #0d6efd;
 }
