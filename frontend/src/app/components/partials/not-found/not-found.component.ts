@@ -1,17 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css'],
+  styleUrls: ['./not-found.component.css']
 })
-export class NotFoundComponent {
+export class NotFoundComponent implements OnInit {
   @Input()
   visible = false;
   @Input()
-  notFoundMessage = 'Nothing Found !';
+  notFoundMessage = "Nothing Found!";
   @Input()
-  resetLinkText = 'Go To Home Page';
+  resetLinkText = "Reset";
   @Input()
-  resetLinkRoute = '/';
+  resetLinkRoute = "/";
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

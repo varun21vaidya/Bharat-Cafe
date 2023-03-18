@@ -1,10 +1,9 @@
-<div class="container" [ngStyle]="{'background-color': bgColor}">
+<div class="container" [ngStyle]="{'background-color': bgColor} ">
+  <label>
+    {{label}}
+  </label>
 
-    <label>
-      {{label}}
-    </label>
-
-    <div class="content">
-      <ng-content></ng-content>
-    </div>
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
 </div>

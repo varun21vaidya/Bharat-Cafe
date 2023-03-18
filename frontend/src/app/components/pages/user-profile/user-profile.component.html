@@ -1,0 +1,78 @@
+<div ng-app="userProfile">
+  <div>
+    <button type="button" class="tooltip btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+      title="Tooltip on top">
+      <div class="toolbar-tools">
+        <h2>
+          <span>OVERVIEW</span>
+        </h2>
+        <span flex></span>
+        <button class="icon-button" ng-if="viewMode" ng-click="switchMode()">
+          <button type="button" class="tooltip btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Tooltip on top">
+            Edit Profile
+          </button>
+          <i>mode_edit</i>
+        </button>
+        <button class="icon-button" ng-if="!viewMode" ng-click="switchMode(); saveChanges()">
+          <button type="button" class="tooltip btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Tooltip on top">
+            Save Changes
+          </button>
+          <i>save</i>
+        </button>
+        <menu>
+          <button class="icon-button" ng-click="$penMenu($event)">
+            <button type="button" class="tooltip btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+              title="Tooltip on top">
+              More Options
+            </button>
+            <i>more_vert</i>
+          </button>
+          <div>
+            <div>
+              <button ng-click="deleteUser()">
+                <i>delete</i>
+                Delete User
+              </button>
+            </div>
+            <div>
+              <button ng-click="resetPassword()">
+                <i>replay</i>
+                Reset Password
+              </button>
+            </div>
+          </div>
+        </menu>
+      </div>
+    </button>
+
+    <div layout-sm="column" layout-gt-sm="row">
+      <div class="user" layout-sm layout-gt-sm="column">
+        <img
+          src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png"
+          alt="user avatar" class="user-avatar" />
+        <button class="icon-button user-avatar-edit" ng-click="browserAvatar()">
+          <i>photo_camera</i>
+        </button>
+        <div class="container">
+          <div class="details">
+            <app-title title="Register"></app-title>
+            <form [formGroup]="upadateForm" (ngSubmit)="submit()">
+              <text-input [control]="fc['name']" [showErrorsWhen]="isSubmitted" label="Name">
+                `</text-input>
+
+              <text-input [control]="fc['email']" [showErrorsWhen]="isSubmitted" label="Email" type="email">
+                `</text-input>
+
+              <text-input [control]="fc['address']" [showErrorsWhen]="isSubmitted" label="Address">
+                `</text-input>
+
+              <default-button text="Update"></default-button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

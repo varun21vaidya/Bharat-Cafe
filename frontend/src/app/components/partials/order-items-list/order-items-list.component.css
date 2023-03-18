@@ -1,35 +1,29 @@
-
-header {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-table{
+table {
   width: 100%;
   border: 1px solid #eeeeee;
   margin-top: 1rem;
   border-radius: 5px;
-  padding-left: 1rem;
+  padding: 1rem;
 }
 
-h3
-{
+h3 {
   margin-top: 0.5rem;
   margin-left: 0.3rem;
-  color:grey;
+  color: grey;
 }
 
-a:hover{
+a:hover {
   opacity: 0.9;
 }
 
-td{
-  height:3rem;
+td {
+  height: 3rem;
 }
 
-td img{
+td img {
   width: 3rem;
   height: 3rem;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 100rem;
+  margin-left: 0.8rem;
 }

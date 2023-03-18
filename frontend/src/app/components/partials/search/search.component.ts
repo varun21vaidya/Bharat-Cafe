@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { FoodService } from 'src/app/services/food.service';
 import { Food } from 'src/app/shared/models/food';
-import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { Router } from '@angular/router';
-import { Tag } from 'src/app/shared/models/tag';
+import { Tag } from 'src/app/shared/models/Tag';
 
 @Component({
   selector: 'app-search',

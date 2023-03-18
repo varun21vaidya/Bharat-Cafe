@@ -98,20 +98,32 @@ router.get(
 router.get(
   "/:id",
   asyncHandler(async (req: any, res: any) => {
-    const foodId=req.params.id;
+    const foodId = req.params.id;
     const foods = await FoodModel.findById(foodId);
     // console.log(`this is food of ${foodId}`,foods);
     res.send(foods);
   })
 );
 
-router.get("/tag/:tagName", (req, res) => {
-  const tagName = req.params.tagName;
-  if (tagName == "All") {
-    res.send(sample_foods);
-  }
-  const foods = sample_foods.filter((food) => food.tags?.includes(tagName));
-  res.send(foods);
-});
+// router.get("/tag/:tagName", asyncHandler(async(req:any, res:any) => {
+//   const tagName = req.params.tagName;
+//   if (tagName == "All") {
+//     res.send(sample_foods);
+//   }
+//   const foods = sample_foods.filter((food) => food.tags?.includes(tagName));
+//   res.send(foods);
+// })
+// );
+
+router.get(
+  "/tag/:tagName",
+  asyncHandler(async (req: any, res: any) => {
+    const searchRegex = new RegExp(req.params.tagName, "i");
+    const foods = await FoodModel.find({
+      tags: { $regex: searchRegex },
+    });
+    res.send(foods);
+  })
+);
 
 export default router;

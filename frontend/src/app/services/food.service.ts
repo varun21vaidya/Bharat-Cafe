@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import {
-  FOODS_BY_ID_URL,
+  FOOD_BY_ID_URL,
   FOODS_BY_SEARCH_URL,
   FOODS_BY_TAG_URL,
   FOODS_TAGS_URL,
   FOODS_URL,
-} from '../shared/constants/env';
+} from '../shared/constants/url';
 import { Food } from '../shared/models/food';
-import { Tag } from '../shared/models/tag';
+import { Tag } from '../shared/models/Tag';
 
 @Injectable({
   providedIn: 'root',
@@ -37,7 +37,7 @@ export class FoodService {
   getFoodById(foodId: string): Observable<Food[]> {
     // return this.getAll().find((food) => food.id == foodId) ?? new Food();
     // console.log('this will be id url for current foodpage', FOODS_BY_ID_URL + foodId);
-    return this.http.get<Food[]>(FOODS_BY_ID_URL + foodId);
+    return this.http.get<Food[]>(FOOD_BY_ID_URL + foodId);
   }
 
   // get tag list and count with Tag[]
@@ -48,10 +48,11 @@ export class FoodService {
 
   getFoodByTag(tag: string): Observable<Food[]> {
     // if user wants all tags return all foods
-    return tag === 'All'
-      ? // else if specific tag is selected return those foods
-        this.getAll()
-      : // this.getAll().filter((food) => food.tags?.includes(tag));
-        this.http.get<Food[]>(FOODS_BY_TAG_URL + tag);
+    // return tag === 'All'
+    //   ?this.getAll()
+    //   // else if specific tag is selected return those foods
+    //   : // this.getAll().filter((food) => food.tags?.includes(tag));
+    //     this.http.get<Food[]>(FOODS_BY_TAG_URL + tag);
+    return this.http.get<Food[]>(FOODS_BY_TAG_URL + tag);
   }
 }

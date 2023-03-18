@@ -22,7 +22,6 @@ export class HeaderComponent {
 
     // after user is logged in changed User to User's name
     userservice.userObservable.subscribe((newUser) => {
-      console.log('after login name', newUser);
       this.user = newUser;
     });
   }

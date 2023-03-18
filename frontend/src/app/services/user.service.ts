@@ -1,11 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { USER_LOGIN_URL,USER_REGISTER_URL } from '../shared/constants/env';
+import {
+  USER_LOGIN_URL,
+  USER_REGISTER_URL,
+  USER_UPDATE_URL,
+} from '../shared/constants/url';
 import { UserLogin } from '../shared/interfaces/UserLogin';
 import { User } from '../shared/models/User';
 import { ToastrService } from 'ngx-toastr';
 import { UserRegister } from '../shared/interfaces/UserRegister';
+import { UserUpdate } from '../shared/interfaces/UserUpdate';
 const USER_KEY = 'User';
 @Injectable({
   providedIn: 'root',
@@ -20,11 +25,11 @@ export class UserService {
     this.userObservable = this.userSubject.asObservable();
   }
 
-  public get currentUser():User{
+  public get currentUser(): User {
     return this.userSubject.value;
   }
 
-  register(userRegister:UserRegister):Observable<User>{
+  register(userRegister: UserRegister): Observable<User> {
     return this.http.post<User>(USER_REGISTER_URL, userRegister).pipe(
       tap({
         next: (user) => {
@@ -37,6 +42,11 @@ export class UserService {
           );
         },
         error: (errorResponse) => {
+          console.log(errorResponse.status);
+          if (errorResponse.status == 400) {
+            this.toastrService.error('Email is already exist, please login!');
+            return;
+          }
           this.toastrService.error('Register Failed, Please Try Again');
         },
       })
@@ -57,6 +67,25 @@ export class UserService {
         },
         error: (errorResponse) => {
           this.toastrService.error('Login Failed, Please Try Again');
+        },
+      })
+    );
+  }
+
+  update(userUpdate: UserUpdate): Observable<User> {
+    return this.http.post<User>(USER_UPDATE_URL, userUpdate).pipe(
+      tap({
+        next: (user) => {
+          // after successfull Update store that user to local storage
+          this.setUserToLocalStorage(user);
+          this.userSubject.next(user);
+          this.toastrService.success(
+            `Welcome,  ${user.name}!`,
+            `Update Successful`
+          );
+        },
+        error: (errorResponse) => {
+          this.toastrService.error('Update Failed, Please Try Again');
         },
       })
     );

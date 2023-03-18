@@ -1,16 +1,15 @@
 <table>
   <tr>
-    <td>
+    <td colspan="5">
       <h3>Order Items:</h3>
     </td>
   </tr>
   <tr *ngFor="let item of order.items">
     <td>
       <a routerLink="/api/foods/{{item.food.id}}">
-        <img [src]="item.food.imageUrl" alt="{{item.food.name}} image">
+        <img [src]="item.food.imageUrl" />
       </a>
     </td>
-
     <td>
       {{item.food.name}}
     </td>
@@ -23,14 +22,12 @@
     <td>
       {{item.price | currency}}
     </td>
-
   </tr>
-
   <tr>
-
-    <td >
+    <td colspan="3"></td>
+    <td>
       <strong>
-        Total:
+        Total :
       </strong>
     </td>
     <td>
@@ -39,5 +36,4 @@
       </strong>
     </td>
   </tr>
-
 </table>
