@@ -11,6 +11,10 @@ This is a Simple Page Website made with Angular as frontend, NodeJs, Express as 
 
 ![image](https://user-images.githubusercontent.com/65745841/226131159-81ebe342-a6d0-4d79-ab52-426db01f1edd.png)
 
+- Filter with Tags
+
+![image](https://user-images.githubusercontent.com/65745841/226142499-380e8117-37a9-4880-84cf-4dd2ad29f5fc.png)
+
 - Food Page
 
 ![image](https://user-images.githubusercontent.com/65745841/226131221-17378835-9897-4257-bd69-c7c428dbc580.png)
