@@ -16,11 +16,6 @@
   margin-right: 3rem;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
 .summary > div {
   display: flex;
   margin-top: 0.7rem;
@@ -58,5 +53,8 @@ button {
     margin: 2rem;
     margin-right: 6rem;
     width: 20rem;
+  }
+  .mapp {
+    width: 22rem;
   }
 }
