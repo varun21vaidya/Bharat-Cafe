@@ -17,7 +17,12 @@ app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:4200", "https://bharatcafe.vercel.app"],
+    origin: [
+      "http://localhost:4200",
+      "https://bharat-cafe.vercel.app",
+      "https://bharat-cafe-varun21vaidya.vercel.app",
+      "https://bharat-cafe-git-master-varun21vaidya.vercel.app",
+    ],
   })
 );
 
