@@ -9,7 +9,6 @@ import { FoodpageComponent } from './components/pages/foodpage/foodpage.componen
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
-import { User } from './shared/models/User';
 import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },

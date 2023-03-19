@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { CartService } from 'src/app/services/cart.service';
 import { OrderService } from 'src/app/services/order.service';
 import { UserService } from 'src/app/services/user.service';
-import { Order } from 'src/app/shared/models/Order';
+import { Order } from 'src/app/shared/models/order';
 
 @Component({
   selector: 'app-checkout-page',

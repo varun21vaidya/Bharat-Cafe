@@ -10,7 +10,7 @@ import {
   FOODS_URL,
 } from '../shared/constants/url';
 import { Food } from '../shared/models/food';
-import { Tag } from '../shared/models/Tag';
+import { Tag } from '../shared/models/tag';
 
 @Injectable({
   providedIn: 'root',

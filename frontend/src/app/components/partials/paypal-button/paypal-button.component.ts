@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CartService } from 'src/app/services/cart.service';
 import { OrderService } from 'src/app/services/order.service';
-import { Order } from 'src/app/shared/models/Order';
+import { Order } from 'src/app/shared/models/order';
 
 //window.paypal
 declare var paypal: any;

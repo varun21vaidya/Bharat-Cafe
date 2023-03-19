@@ -7,7 +7,7 @@ import {
   USER_UPDATE_URL,
 } from '../shared/constants/url';
 import { UserLogin } from '../shared/interfaces/UserLogin';
-import { User } from '../shared/models/User';
+import { User } from '../shared/models/user';
 import { ToastrService } from 'ngx-toastr';
 import { UserRegister } from '../shared/interfaces/UserRegister';
 import { UserUpdate } from '../shared/interfaces/UserUpdate';

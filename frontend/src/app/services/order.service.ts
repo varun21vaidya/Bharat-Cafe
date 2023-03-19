@@ -7,15 +7,15 @@ import {
   ORDER_PAY_URL,
   ORDER_TRACK_URL,
 } from '../shared/constants/url';
-import { Order } from '../shared/models/Order';
+import { Order } from '../shared/models/order';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OrderService {
   constructor(private http: HttpClient) {}
-  
-  create(order:Order){
+
+  create(order: Order) {
     return this.http.post<Order>(ORDER_CREATE_URL, order);
   }
 

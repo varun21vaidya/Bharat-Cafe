@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FoodService } from 'src/app/services/food.service';
 import { Food } from 'src/app/shared/models/food';
 import { Router } from '@angular/router';
-import { Tag } from 'src/app/shared/models/Tag';
+import { Tag } from 'src/app/shared/models/tag';
 
 @Component({
   selector: 'app-search',

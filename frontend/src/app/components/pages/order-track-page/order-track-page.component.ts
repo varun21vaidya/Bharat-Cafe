@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from 'src/app/services/order.service';
-import { Order } from 'src/app/shared/models/Order';
+import { Order } from 'src/app/shared/models/order';
 
 @Component({
   selector: 'app-order-track-page',
