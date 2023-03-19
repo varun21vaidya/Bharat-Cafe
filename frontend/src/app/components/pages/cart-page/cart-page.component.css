@@ -86,7 +86,6 @@ li .remove-button:hover {
 .checkout > div {
   font-size: 1.4rem;
   margin: 0.5rem;
-  margin-bottom: 0rem;
   flex: 3;
   display: flex;
   flex-direction: column;
@@ -106,9 +105,6 @@ li .remove-button:hover {
 .total-price::before {
   content: "Price: ";
   color: grey;
-}
-.total-price {
-  margin-bottom: 0rem;
 }
 @media screen and (max-width: 600px) {
   .checkout {
