@@ -2,9 +2,9 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
-    "build": "npm install --force && ng build --configuration production"
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {
