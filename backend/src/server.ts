@@ -5,7 +5,6 @@ import userRouter from "./router/user.router";
 import orderRouter from "./router/order.router";
 import dotenv from "dotenv";
 dotenv.config();
-console.log("in server", process.env.JWT_SECRET! );
 // connect to db
 import { connectDB } from "./DB/config";
 connectDB();

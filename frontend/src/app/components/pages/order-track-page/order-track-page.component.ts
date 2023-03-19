@@ -18,4 +18,5 @@ export class OrderTrackPageComponent implements OnInit {
       this.order = order;
     });
   }
+  ngOnInit(): void {}
 }

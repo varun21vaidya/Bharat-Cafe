@@ -1,8 +1,10 @@
---transition: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+@property --transition {
+  initial-value: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
 .user {
   position: relative;
-  transition: var(--transition);
+  transition: --transition;
 }
 .user-avatar {
   border-radius: 50%;
@@ -16,13 +18,13 @@
   left: 50%;
   background-color: rgba(0, 0, 0, 0.54) !important;
   opacity: 0;
-  transition: opacity var(--transition);
+  transition: opacity --transition;
 }
 .icon {
   color: rgba(255, 255, 255, 0.87);
 }
 .user-avatar:hover {
-  transition: var(--transition);
+  transition: --transition;
 }
 .user-avatar-edit:hover,
 .user-avatar:hover + .user-avatar-edit {
@@ -43,9 +45,10 @@
 .user-name,
 .user-title {
   background-image: none !important;
-  &.input[disabled] {
-    color: rgba(0, 0, 0, 0.87);
-  }
+}
+.user-name,
+.user-title .input[disabled] {
+  color: rgba(0, 0, 0, 0.87);
 }
 @media (max-width: 599px) {
   .user {
@@ -61,7 +64,7 @@
     top: 36px;
     left: 30px;
   }
-  .toolbar-tools >menu {
+  .toolbar-tools > menu {
     padding: 0;
   }
 }
@@ -102,7 +105,7 @@
   }
 }
 
-// Scaffolding
+/* // Scaffolding */
 body {
   background: #f2f2f2;
   padding: 16px;
