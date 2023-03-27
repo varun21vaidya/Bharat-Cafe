@@ -11,6 +11,7 @@
 
 - Live Site:
 https://bharat-cafe-varun21vaidya.vercel.app/
+- Note: Deployed App may take couple of minutes to rebuild.
 
 
 
