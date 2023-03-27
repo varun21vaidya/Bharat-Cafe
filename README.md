@@ -1,34 +1,102 @@
 # Bharat-Cafe
 
-This is a Simple Page Website made with Angular as frontend, NodeJs, Express as Backend and MongoDB Atlas for database
+- [Demo](#demo)
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Contact](#contact)
 
-Checkout Live Site: https://bharat-cafe-varun21vaidya.vercel.app
+---
 
+- Live Site:
+https://bharat-cafe-varun21vaidya.vercel.app/
+
+
+
+## Demo:
+
+https://user-images.githubusercontent.com/65745841/228040892-b9b6531c-4444-419a-af74-2ad0a198b3b1.mp4
+
+
+## Overview:
+
+The Website is a Single Page Responsive Application made with MEAN Stack for the Fast Food Cafe.
+
+
+### Built With:
+
+- Frontend: Angular 14
+- Backend: NodeJS and ExpressJS
+- Database: MongoDB Atlas
+
+## Features:
+
+- User story: User Can See Catalog of All the Food Items
+- User story: User can click on Food Item and Can see its Details.
+- User story: User Should be able to Add the item to the Cart.
+- User story: User Should be able to Search Items.
+- User story: User Should be able to filter Food Items according to the Tags
+- User Story: After Adding to Cart It Should have Order Page with Editable User Info and Map to select Address.
+- User story: After Filling Info in Order Page, It should redirect to Summery and Payment Page.
 
 - HOMEPAGE
 
-![image](https://user-images.githubusercontent.com/65745841/226131135-52b094a4-13a4-4473-9fcb-e96f77aec34e.png)
+![image](https://user-images.githubusercontent.com/65745841/228042885-5973abe0-e594-4969-bbcd-b46fe766b8f0.png)
 
-- SEARCH Functionality
+- SEARCH FUNCTIONALITY
 
-![image](https://user-images.githubusercontent.com/65745841/226131159-81ebe342-a6d0-4d79-ab52-426db01f1edd.png)
+![image](https://user-images.githubusercontent.com/65745841/228042769-54836787-fa44-4697-b81c-cc92d2a394d0.png)
 
-- Filter with Tags
+- FILTER WITH TAGS
 
-![image](https://user-images.githubusercontent.com/65745841/226142499-380e8117-37a9-4880-84cf-4dd2ad29f5fc.png)
+![image](https://user-images.githubusercontent.com/65745841/228042818-a8497d2f-63fd-4a27-866d-b491619cd5cd.png)
 
-- Food Page
+- FOOD PAGE
 
-![image](https://user-images.githubusercontent.com/65745841/226131221-17378835-9897-4257-bd69-c7c428dbc580.png)
+![image](https://user-images.githubusercontent.com/65745841/228042834-aeb392d7-e326-47a2-b6a4-804596c2ddf1.png)
 
 - ADD TO CART
 
-![image](https://user-images.githubusercontent.com/65745841/226132163-542d6f7f-c1ec-475c-88b9-5ff123237a79.png)
+![image](https://user-images.githubusercontent.com/65745841/228043048-1a6b6ed9-2153-4579-9081-508f3e761c94.png)
 
-- Order Page
+- LOGIN
 
-![image](https://user-images.githubusercontent.com/65745841/226132317-ce6b9f2f-0ed9-42e5-9387-d3a16258d7c6.png)
+![image](https://user-images.githubusercontent.com/65745841/228043086-015b98fe-c5c2-4bf8-8fa5-305f1a805098.png)
 
-- Payment Page
+- REGISTER
 
-![image](https://user-images.githubusercontent.com/65745841/226132452-c85089e6-b106-4fe3-b884-545b5593e48a.png)
+![image](https://user-images.githubusercontent.com/65745841/228043408-afc72a47-b2ff-4716-9bb8-fd36537afb35.png)
+
+- ORDER PAGE
+
+![image](https://user-images.githubusercontent.com/65745841/228043564-db88dcd8-c34b-47cc-b8bb-d021e77f078c.png)
+
+- PAYMENT PAGE
+
+![image](https://user-images.githubusercontent.com/65745841/228043597-fa61d44c-c087-4a6f-81fa-526382304809.png)
+
+
+
+## How To Use:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+Clone URL: https://github.com/varun21vaidya/Bharat-Cafe
+
+
+```bash
+# Clone this repository
+$ git clone https://github.com/user-name/project-name
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
+
+## Contact
+
+- [GitHub](https://github.com/varun21vaidya)
+- [Twitter](https://twitter.com/Varun21vaidya)
+- [LinkedIn](https://www.linkedin.com/in/varunvvaidya)
