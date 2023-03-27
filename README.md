@@ -58,7 +58,7 @@ The Website is a Single Page Responsive Application made with MEAN Stack for the
 
 - ADD TO CART
 
-![image](https://user-images.githubusercontent.com/65745841/228043048-1a6b6ed9-2153-4579-9081-508f3e761c94.png)
+![image](https://user-images.githubusercontent.com/65745841/228044548-4fb34d40-d2f3-4088-8a86-73a27697e941.png)
 
 - LOGIN
 
