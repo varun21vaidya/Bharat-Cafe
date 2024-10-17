@@ -22,14 +22,7 @@ https://user-images.githubusercontent.com/65745841/228040892-b9b6531c-4444-419a-
 
 ## Overview:
 
-The Website is a Single Page Responsive Application made with MEAN Stack for the Fast Food Cafe.
-
-
-### Built With:
-
-- Frontend: Angular 14
-- Backend: NodeJS and ExpressJS
-- Database: MongoDB Atlas
+The Website is a Single Page Responsive Application made for the Fast Food Cafe.
 
 ## Features:
 
